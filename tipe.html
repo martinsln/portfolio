@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wind Noise Reduction – Martin Saulnier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="fade-in">
+  <div class="container">
+    <header>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">Martin Saulnier - Portfolio</a>
+      </div>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="academics.html">Academics</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 style="text-align: center; font-weight: 600; font-size: 2rem; margin-bottom: 60px;">🎧 Wind Noise Reduction in Ski Helmets</h1>
+
+      <!-- Block 1 -->
+      <div class="project reverse">
+        <div class="project-info">
+          <h2>Project Overview</h2>
+          <p>
+            This electronics-focused project aimed to reduce wind noise in ski helmets while preserving ambient sounds for safety. The key objective was to recreate a synchronous detection system—typically used to extract weak signals buried in noise—using basic electronic components like resistors, capacitors, and op-amps.
+          </p>
+          <p>
+            The final goal was to miniaturize the circuit for real-life integration inside a ski helmet.
+          </p>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/tipe/diapason.jpg" class="show" alt="Testing with tuning fork" />
+        </div>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="project">
+        <div class="project-info">
+          <h2>Initial Experimentation</h2>
+          <p>
+            I began by simplifying the input signal using a tuning fork to simulate a pure frequency tone, while replicating wind noise using a fan. This setup allowed me to focus on signal isolation techniques in realistic conditions.
+          </p>
+          <p>
+            The wind signal was approximated as noise above 400 Hz, and the human voice range (100–400 Hz) was targeted for preservation.
+          </p>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/tipe/montage.jpg" class="show" alt="Amplification and filtering circuit" />
+        </div>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="project reverse">
+        <div class="project-info">
+          <h2>Optimizing Signal Filtering</h2>
+          <p>
+            The initial low-pass filter (1st order) was insufficient. To improve accuracy, I added an amplification stage and a 2nd-order active low-pass filter (Rauch structure). This significantly improved the signal-to-noise ratio and filtering performance.
+          </p>
+          <p>
+            The final system showed a 23% improvement in signal clarity. I then continued the study by aiming to miniaturize the circuit. After some research, I found a way to build a "mini-generator" using coils and capacitors, and integrated the circuit onto a small board, resulting in the following prototype.
+          </p>
+                    <br><br><br>
+          <a href="pdf/tipe.pdf" download class="details-button" style="margin-top: 50px; padding: 15px 35px; background-color: rgb(66, 94, 170); color: white; font-weight: 600; border-radius: 6px; text-decoration: none; transition: background-color 0.3s ease;">
+            Download the Project Slides
+          </a>
+        </div>
+        <div class="project-carousel">
+          <img src="img/tipe.jpg" class="show" alt="Miniaturized version of the final circuit" />
+        </div>
+      </div>
+
+      <!-- Back link aligned left -->
+      <div style="margin-top: 80px; text-align: left;">
+        <a href="projects.html" class="project-link">← Back to Projects</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

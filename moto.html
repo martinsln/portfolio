@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fantastical Motorcycle CAD – Martin Saulnier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body class="fade-in">
+  <div class="container">
+    <header>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">Martin Saulnier - Portfolio</a>
+      </div>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="academics.html">Academics</a>
+      </nav>
+    </header>
+    <main>
+
+      <h1 class="projects-title">🦄 Fantastical Motorcycle CAD Project</h1>
+      <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem; color: #333;">Detailed 3D modeling of a unicorn-themed motorcycle combining creativity and technical precision.</p>
+      <div class="project">
+            <div class="project-info">
+                <h3>The design</h3>
+                <p>We aimed to create a playful and fantastical motorcycle design, featuring a unicorn theme and vivid colors. Starting with the unicorn as the front fairing, we developed a visually engaging concept combining imaginative elements with mechanical function. The use of spring shapes in the rear wheel evokes the unicorn's horn, tying the theme together.</p>
+            </div>
+            <div class="project-carousel"> 
+                <img src="img/projects/moto/moto.jpg" class="show" alt="Global view of the motorcycle" /> 
+            </div>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info"> 
+            <h3>Rear Wheel and Spring Integration</h3>
+            <p>The rear wheel design involved advanced modeling techniques. Using sweep operations and parametric laws, we crafted helicoidal springs with varying radius to serve both aesthetic and structural purposes. Multiple Bézier curves and multi-section surfaces shaped the wheel, while circular patterns were used to duplicate the springs evenly.</p>
+        </div>
+        <div class="project-carousel">
+            <img src="img/projects/moto/jante.jpg" class="show" alt="Rear wheel with spring design" />
+        </div>     
+      </div>
+
+      <div class="project">
+        <div class="project-info"><h3>Front Fairing and Unicorn Horn</h3>
+          <p>The front fairing includes a sculpted unicorn head and horn, achieved with complex surface operations and sweep functions. Defining multiple planes for curve projections was crucial. We also added a 80mm pocket to embed a headlight, blending design with utility.</p>
+        </div>
+        <div class="project-carousel">        
+            <img src="img/projects/moto/tete_fourche.jpg" class="show" alt="Front fairing with unicorn horn" />
+        </div>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info">          
+            <h3>Front Fender Shaping</h3>
+            <p>The fender design required accurate alignment with the wheel. We used splines and multi-surface tools to wrap the geometry around the tire and brake disk. Precise transformations were needed to properly align the given profile to the tilted orientation of the wheel.</p>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="pdf/rapport_moto.pdf" download class="details-button" style="padding: 15px 35px; background-color: rgb(66, 94, 170); color: white; font-weight: 600; border-radius: 6px; text-decoration: none; transition: background-color 0.3s ease;">
+                Download the Project Report
+                </a>
+            </div>
+        </div>
+        <div class="project-carousel">    
+            <img src="img/projects/moto/garde_boue.jpg" class="show" alt="Front fender modeled to wrap the wheel" /> 
+        </div>
+      </div>
+
+
+
+      <!-- Back to Projects -->
+      <div style="margin-top: 60px; text-align: left;">
+        <a href="projects.html" class="project-link">← Back to Projects</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

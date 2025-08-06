@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects – Martin Saulnier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+
+<body class="fade-in">
+  <div class="container">
+    <header>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">Martin Saulnier - Portfolio</a>
+      </div>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="academics.html">Academics</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="projects-title">Projects</h1>
+      <p style="text-align: center; margin-bottom: 60px; font-size: 1.1rem; color: #333;">Here are some of the projects I've worked on.</p>
+
+      <!-- Projet 1 -->
+      <div class="project">
+        <div class="project-carousel lightbox-group" data-carousel="proj1">
+          <img src="img/projects/moto/moto.jpg" class="carousel-image show" alt="Projet 1 image 1" onclick="openLightbox(this.src)"/>
+          <img src="img/projects/moto/tete_fourche.jpg" class="carousel-image" alt="Projet 1 image 2" onclick="openLightbox(this.src)"/>
+          <img src="img/projects/moto/jante.jpg" class="carousel-image" alt="Projet 1 image 3" onclick="openLightbox(this.src)"/>
+          <div class="arrow prev" aria-label="Previous image">
+              <div class="arrow-top"></div>
+              <div class="arrow-bottom"></div>
+            </div>
+            <div class="arrow next" aria-label="Next image">
+              <div class="arrow-top"></div>
+              <div class="arrow-bottom"></div>
+            </div>
+          <div class="carousel-dots"></div>
+        </div>
+        <div class="project-info">
+          <h3>🦄 3D CAD Project – Fantastical Motorcycle Design</h3>
+          <p>As part of a group CAD project, we designed and assembled a colorful, unicorn-themed motorcycle using advanced 3D modeling techniques. I contributed to the creation of key components including the rear wheel, the front fender, and the front fairing. This involved parametric sweep functions, Bézier curves, multi-section surfaces, and spring generation. The project combined mechanical function with creative design, highlighting both technical skill and aesthetic choices in a collaborative engineering context.</p>
+          <button class="cta" onclick="window.location.href='moto.html'">
+            <span> Click to see more </span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Projet 2 (inversé) -->
+      <div class="project reverse">
+        <div class="project-carousel lightbox-group" data-carousel="proj1">
+          <img src="img/projects/eolienne/eolienne.png" class="carousel-image show" alt="Projet 2 image 1" onclick="openLightbox(this.src)" />
+          <img src="img/projects/eolienne/3.png" class="carousel-image" alt="Projet 2 image 2" onclick="openLightbox(this.src)" />
+          <img src="img/projects/eolienne/2.png" class="carousel-image" alt="Projet 2 image 3" onclick="openLightbox(this.src)" />
+          <div class="arrow prev" aria-label="Previous image">
+              <div class="arrow-top"></div>
+              <div class="arrow-bottom"></div>
+            </div>
+            <div class="arrow next" aria-label="Next image">
+              <div class="arrow-top"></div>
+              <div class="arrow-bottom"></div>
+            </div>
+          <div class="carousel-dots"></div>
+        </div>
+        <div class="project-info">
+          <h3>🌿 UrbanWind: Smart Micro-Wind Turbine Transmission System</h3>
+          <p>UrbanWind is a compact wind turbine system designed for urban environments, aimed at efficiently converting wind energy into electrical power. The project involved the full mechanical design of the turbine’s transmission system — including the rotor, gearbox, shafts, and bearings — using a combination of analytical calculations, CAD modeling, and numerical simulations. </p>
+          <button class="cta" onclick="window.location.href='eolienne.html'">
+            <span> Click to see more </span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div> 
+
+      <!-- Projet 3 -->
+      <div class="project">
+        <div class="project-carousel lightbox-group" data-carousel="proj1">
+          <img src="img/tipe.jpg" class="carousel-image show" alt="Projet 3 image 1" onclick="openLightbox(this.src)"/>
+          <img src="img/projects/project3/manip.jpg" class="carousel-image" alt="Projet 3 image 2" onclick="openLightbox(this.src)"/>
+          <div class="arrow prev" aria-label="Previous image">
+              <div class="arrow-top"></div>
+              <div class="arrow-bottom"></div>
+            </div>
+            <div class="arrow next" aria-label="Next image">
+              <div class="arrow-top"></div>
+              <div class="arrow-bottom"></div>
+            </div>
+          <div class="carousel-dots"></div>
+        </div>
+        <div class="project-info">
+          <h3>🎧 Wind Noise Reduction in Ski Helmets</h3>
+          <p>This project aims to reduce wind noise in ski helmets while keeping surrounding sounds audible. Using a Lock-In Amplifier built from basic electronic components (filters, multipliers, function generators), the system isolates and removes wind noise based on its frequency. The goal is to test the effectiveness of synchronous detection and explore the possibility of integrating the circuit into a ski helmet.</p>
+          <button class="cta" onclick="window.location.href='tipe.html'">
+            <span> Click to see more </span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

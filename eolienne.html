@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fantastical Motorcycle CAD – Martin Saulnier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body class="fade-in">
+  <div class="container">
+    <header>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">Martin Saulnier - Portfolio</a>
+      </div>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="academics.html">Academics</a>
+      </nav>
+    </header>
+    <main>
+
+      <h1 class="projects-title">🌿 UrbanWind: Smart Micro-Wind Turbine Transmission System</h1>
+      <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem; color: #333;">Comprehensive mechanical design of a compact urban wind turbine, blending analytical rigor with advanced 3D modeling.</p>
+      <div class="project">
+            <div class="project-info">
+                <h3>The Project</h3>
+                <p>UrbanWind is an engineering project focused on designing a high-efficiency micro wind turbine for urban environments. Our goal was to convert wind energy into electricity through a compact, reliable, and cost-effective system. Spanning multiple development phases, this project involved a complete mechanical and structural design of the wind turbine’s key components, including the rotor, gearbox, shafts, and bearings. Through a mix of analytical calculations, CAD modeling, and finite element simulations, we engineered a custom transmission system that meets the strict performance and durability standards required for continuous daily operation over 10 years.</p>
+            </div>
+            <div class="project-carousel"> 
+                <img src="img/projects/eolienne/eolienne.png" class="show" alt="Global view of the wind turbine" /> 
+            </div>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info"> 
+            <h3>Milestone 1 – System Design & Pre-Dimensioning</h3>
+            <p>TIn the first phase of the project, we focused on establishing the foundation of the turbine’s design. This involved a comprehensive analysis of the energy conversion chain — from wind to mechanical rotation — and setting technical requirements based on environmental constraints and target energy output (4.9 kW). We dimensioned the rotor, calculated the blade length and rotor diameter using aerodynamic formulas, and designed the hollow shaft and belt transmission system. This stage culminated in validating the feasibility of the power transmission chain using real engineering data and catalogs.</p>
+        </div>
+        <div class="project-carousel">
+            <img src="img/projects/eolienne/3.png" class="show" alt="Jalon 1" />
+        </div>     
+      </div>
+
+      <div class="project">
+        <div class="project-info"><h3>Milestone 2 – Modeling the Powertrain System</h3>
+          <p>During the second phase, we transitioned from theoretical sizing to a concrete mechanical model using 3DX software. The core task was dimensioning the speed multiplier — a crucial gearbox component connecting the rotor to the generator. We performed iterative calculations for gear selection using Hertz and bending stress criteria, considering material fatigue, torque transmission, and geometry optimization. Simultaneously, we selected and validated the ball bearings using SKF catalog data, ensuring long-term durability. The result was a fully modeled, feasible transmission system ready for virtual assembly.</p>
+        </div>
+        <div class="project-carousel">        
+            <img src="img/projects/eolienne/2.png" class="show" alt="Jalon 2" />
+        </div>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info">          
+            <h3>Milestone 3 – Structural Verification & CAD Completion</h3>
+            <p>The final milestone focused on refining and verifying the mechanical components. We analytically and numerically verified shaft dimensions using ABAQUS finite element simulations, ensuring stress limits (Von Mises, Tresca) and maximum deflection criteria were met. We finalized the gearbox housing design with detailed CAD features such as split casings, sealing systems, and structural reinforcements. Additionally, we corrected the bearing selections to accommodate updated forces, and integrated all components into a clean, manufacturable assembly. This comprehensive validation ensures that UrbanWind is not only theoretically robust but practically buildable.</p>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="pdf/rapport_pjt.pdf" download class="details-button" style="padding: 15px 35px; background-color: rgb(66, 94, 170); color: white; font-weight: 600; border-radius: 6px; text-decoration: none; transition: background-color 0.3s ease;">
+                Download the Project Report
+                </a>
+            </div>
+        </div>
+        <div class="project-carousel">    
+            <img src="img/projects/eolienne/1.png" class="show" alt="Jalon 3" /> 
+        </div>
+      </div>
+
+
+
+      <!-- Back to Projects -->
+      <div style="margin-top: 60px; text-align: left;">
+        <a href="projects.html" class="project-link">← Back to Projects</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
