@@ -1002,4 +1002,9 @@ main {
     font-size: 0.75rem;
     padding: 4px 8px;
   }
+  .rainbow-hover { #pour que le texte ne chevauche pas sur telephone
+    position: static;
+    display: inline-block;
+    margin-top: 20px;
+  }
 }
