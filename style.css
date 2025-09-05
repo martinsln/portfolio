@@ -13,9 +13,9 @@ a {
 }
 
 .container {
-max-width: 1200px; 
-margin: 0 auto;
-padding: 40px 20px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 50px;
 }
 
 header {
@@ -429,12 +429,10 @@ main {
   background-color: #0056b3;
 }
 
-/* Projet inversé */
 .project.reverse {
   flex-direction: row-reverse;
 }
 
-/* Lightbox */
 #lightbox {
   display: none;
   position: fixed;
@@ -1002,9 +1000,10 @@ main {
     font-size: 0.75rem;
     padding: 4px 8px;
   }
-  .rainbow-hover { /*pour que le texte ne chevauche pas sur telephone*/
+  .rainbow-hover {
     position: static;
     display: inline-block;
     margin-top: 20px;
   }
 }
+
