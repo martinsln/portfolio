@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AMJE Bordeaux App — Martin Saulnier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="fade-in">
+  <div class="container">
+    <header>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">Martin Saulnier - Portfolio</a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="academics.html">Academics</a>
+        <a href="experience.html">Experience</a>
+      </nav>
+    </header>
+
+    <main class="amje-page">
+      <h1 class="projects-title">📱 AMJE Bordeaux — Mobile App (Expo + Supabase)</h1>
+      <div class="project-objective">
+        <span class="objective-label">Objective</span>
+        <ul class="project-kpis">
+          <li>Designed an internal mobile application to simplify how AMJE Bordeaux manages its consulting studies</li>
+          <li>Brought project tracking, study statuses, and KPIs together into a single, clear interface</li>
+          <li>Set up realtime updates so everyone always sees the same information</li>
+        </ul>
+      </div>
+
+      <div class="tools-card">
+        <span class="tools-title">Tools & Languages</span>
+        <ul class="tools-list">
+          <li>
+            <i class="fas fa-mobile-alt"></i>
+            <span>Expo</span>
+          </li>
+          <li>
+            <i class="fab fa-react"></i>
+            <span>React Native</span>
+          </li>
+          <li>
+            <i class="fab fa-java"></i>
+            <span>Java</span>
+          </li>
+          <li>
+            <i class="fas fa-database"></i>
+            <span>SQL</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info">
+          <h2>Project Overview</h2>
+          <ul class="project-kpis">
+            <li>Developed a mobile app used internally by AMJE Bordeaux members on a daily basis</li>
+            <li>Built features to create studies, update their status, and track their progress over time</li>
+            <li>Connected the frontend to a realtime backend to display KPIs live as data changes</li>
+          </ul>
+        </div>
+        <div class="project-carousel" style="flex: 0 0 220px; max-width: 400px;">
+          <img
+            src="img/projects/amje/app-demo.gif"
+            class="show"
+            alt="AMJE dashboard with KPIs and recent studies"
+            style="max-width: 170px; height: auto; margin: 40px auto; display: block; border-radius: 28px;"
+          />
+        </div>
+      </div>
+
+
+      <div class="project">
+        <div class="project-info">
+          <h2>Dashboard & KPIs</h2>
+          <ul class="project-kpis">
+            <li>Built a dashboard showing key numbers like total revenue, number of studies, and recent activity</li>
+            <li>Made sure KPIs update instantly across devices using realtime synchronization</li>
+          </ul>
+        </div>
+        <div class="project-carousel" style="flex: 0 0 220px; max-width: 220px;">
+          <img
+            src="img/projects/amje/dashboard.png"
+            class="show"
+            style="max-width: 170px; height: auto; margin: 0 auto; display: block; border-radius: 28px;"
+          />
+        </div>
+      </div>
+
+
+      <div class="project reverse">
+        <div class="project-info">
+          <h2>Create, Update, Delete (Realtime)</h2>
+          <ul class="project-kpis">
+            <li>Designed a simple and consistent data model to represent studies and their lifecycle</li>
+            <li>Implemented create, update, and delete actions directly from the mobile app</li>
+            <li>Synced every change in realtime so updates appear instantly for all connected users</li>
+          </ul>
+        </div>
+        <div class="project-carousel" style="flex: 0 0 220px; max-width: 220px;">
+          <img
+            src="img/projects/amje/new-study.png"
+            class="show"
+            style="max-width: 170px; height: auto; margin: 0 auto; display: block; border-radius: 28px;"
+          />
+        </div>
+      </div>
+
+
+      <div class="project">
+        <div class="project-info">
+          <h2>Tech Stack</h2>
+          <ul class="project-kpis">
+            <li>Developed the frontend using Expo and React Native with TypeScript</li>
+            <li>Handled navigation and screen structure with Expo Router</li>
+            <li>Built the backend on Supabase using PostgreSQL and realtime features</li>
+          </ul>
+        </div>
+        <div class="project-carousel" style="flex: 0 0 800px; margin-top: 30px;">
+
+          <img
+            src="img/projects/amje/supabase-table.png"
+            class="show"
+            alt="Supabase Table Editor - etudes"
+            style="height: auto; margin: 0 auto; display: block; border-radius: 12px;"
+          />
+        </div>
+      </div>
+
+
+      <div class="project-results">
+        <span class="results-label">Results</span>
+        <ul class="project-kpis">
+          <li>Centralized all study-related information in a single tool used by the whole team</li>
+          <li>Reduced back-and-forth and delays during study reviews and validations (-50% in 4 months)</li>
+          <li>Made it easier to manage more studies at the same time without losing visibility</li>
+        </ul>
+      </div>
+
+      <div class="project-back">
+        <a href="projects.html" class="project-link">← Back to Projects</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wind Noise Reduction – Martin Saulnier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body class="fade-in">
+  <div class="container">
+    <header>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">Martin Saulnier - Portfolio</a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="academics.html">Academics</a>
+        <a href="experience.html">Experience</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 style="text-align: center; font-weight: 600; font-size: 2rem; margin-bottom: 0px;">🎧 Wind Noise Reduction in Ski Helmets</h1>
+
+      <div class="project-objective">
+        <span class="objective-label">Objective</span>
+        <p>
+          Reduce wind noise in ski helmets while preserving useful ambient sounds.
+          The project implements a synchronous detection approach using basic electronic components
+          to isolate a target signal buried in wind-induced noise.
+        </p>
+      </div>
+
+    <div class="tools-card">
+      <span class="tools-title">Tools & Languages</span>
+      <ul class="tools-list">
+        <li>
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </li>
+        <li>
+          <i class="fas fa-drafting-compass"></i>
+          <span>MATLAB</span>
+        </li>
+        <li>
+          <i class="fas fa-signal"></i>
+          <span>SciPy (signal)</span>
+        </li>
+        <li>
+          <i class="fas fa-microchip"></i>
+          <span>NumPy (FFT)</span>
+        </li>
+      </ul>
+    </div>
+  
+      <div class="project reverse">
+        <div class="project-info">
+          <h2>Project Overview</h2>
+          <ul class="project-kpis">
+            <li>
+              Conducted a state-of-the-art review on wind noise generation in ski helmets and existing
+              signal processing approaches for noise reduction.
+            </li>
+            <li>
+              Defined a global methodology combining analytical modelling, electronic circuit design,
+              experimental testing, and validation of results.
+            </li>
+            <li>
+              Designed a synchronous detection approach based on lock-in amplifier principles to isolate
+              a target signal from wind-induced noise.
+            </li>
+          </ul>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/tipe/diapason.jpg" class="show" alt="Testing with tuning fork" />
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-info">
+          <h2>Initial Experimentation</h2>
+          <ul class="project-kpis">
+            <li>
+              Set up an experimental bench using a tuning fork to generate a pure reference signal
+              and a fan to reproduce wind noise under controlled conditions.
+            </li>
+            <li>
+              Identified the frequency ranges of interest, with wind noise mainly above 400 Hz
+              and useful ambient signals concentrated between 100 and 400 Hz.
+            </li>
+          </ul>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/tipe/montage.jpg" class="show" alt="Amplification and filtering circuit" />
+        </div>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info">
+          <h2>Optimizing Signal Filtering</h2>
+          <ul class="project-kpis">
+            <li>
+              Started with a first-order low-pass filter and evaluated its limitations through
+              analytical calculations and experimental measurements.
+            </li>
+            <li>
+              Improved the system by adding an amplification stage and a second-order active low-pass
+              filter (Rauch structure) to increase noise attenuation.
+            </li>
+            <li>
+              Miniaturized the final design using a compact generator and integrated the circuit
+              onto a prototype board suitable for further testing.
+              <br><br>
+            </li>
+          </ul>
+
+          <a href="pdf/tipe.pdf" download class="details-button"
+             style="margin-top: 60px; padding: 15px 35px; font-weight: 600; border-radius: 6px; text-decoration: none;">
+            Download the Project Slides
+          </a>
+        </div>
+        <div class="project-carousel">
+          <img src="img/tipe.jpg" class="show" alt="Miniaturized version of the final circuit" />
+        </div>
+      </div>
+
+      <div class="project-results">
+        <span class="results-label">Results</span>
+        <p>
+          The final system was evaluated through a combination of analytical modelling and experimental testing,
+          allowing a direct comparison between predicted and measured performance.
+        </p>
+
+        <ul class="project-kpis">
+          <li><strong>Signal improvement:</strong> ~23% using a 2nd-order active filter</li>
+          <li><strong>Noise attenuation:</strong> ~70% reduction in noise interference above the cutoff frequency</li>
+          <li><strong>Model consistency:</strong> ~95% agreement between experimental results and analytical model</li>
+        </ul>
+      </div>
+
+      <div class="project-back">
+        <a href="projects.html" class="project-link">← Back to Projects</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
