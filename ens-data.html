@@ -77,7 +77,7 @@
           <p>
             At the current stage, we are finalizing a dedicated notebook for data cleaning and sorting,
             ensuring consistent preprocessing and reliable feature construction. In parallel, we are actively
-            working on <strong>k-Nearest Neighbors (k-NN)</strong> models to establish baseline performance and
+            working on <strong>k-Nearest Neighbors (k-NN)</strong> and <strong>Matrix Completion</strong> models to establish baseline performance and
             guide future modelling choices.
           </p>
 
@@ -88,6 +88,31 @@
           </div>
         </div>
       </div>
+
+      <div class="project">
+  <div class="project-info">
+    <h3>Data Preprocessing</h3>
+    <p>
+      A dedicated Python notebook was developed to preprocess the electricity consumption time series before modeling.
+      The notebook handles data loading, detection of missing values, alignment of daily consumption curves, and construction
+      of clean inputs for reconstruction algorithms.
+    </p>
+
+    <ul style="margin-top: 8px;">
+      <li>Identification and masking of missing segments in daily time series</li>
+      <li>Filtering and validation of corrupted or incomplete curves</li>
+      <li>Reshaping and normalization of data for model compatibility</li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 12px;">
+      <a href="https://github.com/martinsln/ens_data_enedis/blob/main/data_prep_notebook.ipynb"
+         target="_blank"
+         class="details-button">
+        View Preprocessing Notebook (GitHub)
+      </a>
+    </div>
+  </div>
+</div>
 
       <div class="project-back">
         <a href="projects.html" class="project-link">← Back to Projects</a>
