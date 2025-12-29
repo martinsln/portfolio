@@ -1,8 +1,15 @@
 :root {
-  --bg-main: #141414;
-  --bg-card: #1F1F1F;
+  --bg-main: #1D1E20;
+  --bg-card: #2E2E33;
   --text-main: #EDEDED;
   --accent: #7AA2F7;
+}
+
+body.light {
+  --bg-main: #E2E8F0;
+  --bg-card: #D6DEE9;
+  --text-main: #0F172A;
+  --accent: #334155;
 }
 
 body {
@@ -36,7 +43,7 @@ header {
 }
 
 .name {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -1019,4 +1026,25 @@ main {
 .tools-list i,
 .tools-list .tool-icon {
   font-size: 1.1rem;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0;
+  color: var(--text-main);
+}
+
+.icon-sun {
+  display: none;
+}
+
+body.light .icon-sun {
+  display: inline;
+}
+
+body.light .icon-moon {
+  display: none;
 }
