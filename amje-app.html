@@ -87,12 +87,13 @@
       </div>
 
       <div class="project reverse">
-        <div class="project-info">
+        <div class="project-info" style="max-width: 1000px;">
           <h2>Project Overview</h2>
           <ul class="project-kpis">
             <li>Developed a mobile app used internally by AMJE Bordeaux members on a daily basis</li>
             <li>Built features to create studies, update their status, and track their progress over time</li>
             <li>Connected the frontend to a realtime backend to display KPIs live as data changes</li>
+            <li>Implemented realtime create, update, and delete actions to keep study data consistent for all users</li>
           </ul>
         </div>
         <div class="project-carousel" style="flex: 0 0 220px; max-width: 400px;">
@@ -107,11 +108,13 @@
 
 
       <div class="project">
-        <div class="project-info">
+        <div class="project-info" style="max-width: 1000px;">
           <h2>Dashboard & KPIs</h2>
           <ul class="project-kpis">
             <li>Built a dashboard showing key numbers like total revenue, number of studies, and recent activity</li>
             <li>Made sure KPIs update instantly across devices using realtime synchronization</li>
+            <li>Designed a consistent data model to represent studies and their lifecycle</li>
+            <li>Enabled realtime synchronization so every update is instantly reflected across devices</li>
           </ul>
         </div>
         <div class="project-carousel" style="flex: 0 0 220px; max-width: 220px;">
@@ -124,27 +127,8 @@
       </div>
 
 
-      <div class="project reverse">
-        <div class="project-info">
-          <h2>Create, Update, Delete (Realtime)</h2>
-          <ul class="project-kpis">
-            <li>Designed a simple and consistent data model to represent studies and their lifecycle</li>
-            <li>Implemented create, update, and delete actions directly from the mobile app</li>
-            <li>Synced every change in realtime so updates appear instantly for all connected users</li>
-          </ul>
-        </div>
-        <div class="project-carousel" style="flex: 0 0 220px; max-width: 220px;">
-          <img
-            src="img/projects/amje/new-study.png"
-            class="show"
-            style="max-width: 170px; height: auto; margin: 0 auto; display: block; border-radius: 28px;"
-          />
-        </div>
-      </div>
-
-
       <div class="project">
-        <div class="project-info">
+        <div class="project-info" style="max-width: 1000px;">
           <h2>Tech Stack</h2>
           <ul class="project-kpis">
             <li>Developed the frontend using Expo and React Native with TypeScript</li>
@@ -152,7 +136,7 @@
             <li>Built the backend on Supabase using PostgreSQL and realtime features</li>
           </ul>
         </div>
-        <div class="project-carousel" style="flex: 0 0 800px; margin-top: 30px;">
+        <div class="project-carousel" style="flex: 0 0 800px; margin-top: 60px;">
 
           <img
             src="img/projects/amje/supabase-table.png"

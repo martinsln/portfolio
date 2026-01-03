@@ -596,6 +596,12 @@ main {
   transition: box-shadow 0.3s ease;
 }
 
+.amje-bot-page .project-info.shift-right {
+  transform: translateX(30px);
+  flex: 1 1 420px;
+  max-width: 720px;
+}
+
 .project-info:hover {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AMJE Slack Automation – Martin Saulnier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="fade-in amje-bot-page">
+  <div class="container">
+    <header>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          Martin Saulnier - Portfolio
+        </a>
+        <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3
+                    7 7 0 0021 12.79z"/>
+          </svg>
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="academics.html">Academics</a>
+        <a href="experience.html">Experience</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 style="text-align: center; font-weight: 600; font-size: 2rem; margin-bottom: 0px;">
+        AMJE Slack Automation
+      </h1>
+      <div style="width:40%;"></div>
+      <div class="project-objective">
+        <span class="objective-label">Objective</span>
+        <p>
+          The objective of this project was to automate document tracking for internal studies at AMJE Bordeaux
+          by integrating a lightweight workflow directly into Slack. The goal was to centralize follow-up,
+          reduce manual reminders, and improve consistency across study channels.
+        </p>
+      </div>
+
+      <div class="tools-card">
+        <span class="tools-title">Tools & Platforms</span>
+        <ul class="tools-list">
+          <li class="tool python">
+            <img src="img/icons/python.svg" alt="Python" class="tool-icon" />
+            <span>Python</span>
+          </li>
+          <li class="tool api">
+            <img src="img/icons/slack.svg" alt="Slack" class="tool-icon" />
+            <span>Slack API</span>
+          </li>
+          <li class="tool web">
+            <img src="img/icons/flask.svg" alt="Flask" class="tool-icon" />
+            <span>Flask</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info shift-right" style="max-width: 1000px;">
+          <h2>Project Overview</h2>
+          <ul class="project-kpis" >
+            <li>
+              Identified limitations in manual document follow-up across Slack study channels.
+            </li>
+            <li>
+              Designed an automated workflow triggered by Slack events to centralize information.
+            </li>
+            <li>
+              Implemented a persistent checklist system embedded directly in Slack messages.
+            </li>
+          </ul>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/bot/overview.gif" class="show" alt="Slack automation overview" />
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-info">
+          <h2>Workflow Automation</h2>
+            <p>
+              Slack commands were implemented to handle document validation directly within study channels.
+            </p>
+
+          <ul class="project-kpis">
+            <li>
+              Each command (e.g. <code>!devis done</code>, <code>!rm done</code>) triggers a backend update that records the document status, the validator, and the validation date.
+            </li>
+            <li>
+              The bot updates a single persistent message using the Slack Web API, ensuring that document status remains synchronized and easy to track.
+            </li>
+          </ul>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/bot/message.png" class="show" alt="Document message" />   
+        </div>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info shift-right" style="max-width: 1000px;">
+          <h2>Interaction & Updates</h2>
+                  <p>
+          I built a dashboard to visualize ongoing studies and track the validation status of required documents.
+        </p>
+
+        <ul class="project-kpis">
+          <li>
+            The dashboard is served by a small Flask application that exposes the data collected by the Slack bot.
+          </li>
+          <li>
+            Jinja templates are used to dynamically generate the page content based on the current state of each study.
+          </li>
+        </ul>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/bot/dashboard.png" class="show" alt="dashboard" />
+        </div>
+      </div>
+
+      <div class="project-results">
+        <span class="results-label">Outcome</span>
+        <p>
+          This project resulted in a functional internal automation used to streamline study tracking
+          within AMJE Bordeaux, while providing hands-on experience with event-driven systems and
+          API-based integrations.
+        </p>
+      </div>
+
+      <div class="project-back">
+        <a href="projects.html" class="project-link">← Back to Projects</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
