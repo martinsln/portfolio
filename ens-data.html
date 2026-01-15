@@ -52,7 +52,7 @@
 
     <main>
       <h1 class="projects-title">ENS Data Challenge</h1>
-      <div style="width:40%;"></div>
+
       <div class="project-objective">
         <span class="objective-label">Objective</span>
         <p>
@@ -64,28 +64,20 @@
           Model performance is evaluated using the Mean Absolute Error (MAE), computed only on the missing points.
         </p>
       </div>
-      
+
       <div class="tools-card">
         <span class="tools-title">Tools & Languages</span>
         <ul class="tools-list">
           <li class="tool python">
-          <img
-            src="img/icons/python.svg"
-            alt="Python"
-            class="tool-icon"
-          />
-          <span>Python</span>
+            <img src="img/icons/python.svg" alt="Python" class="tool-icon" />
+            <span>Python</span>
           </li>
           <li class="tool spreadsheet">
             <i class="fas fa-table"></i>
             <span>Pandas</span>
           </li>
           <li class="tool diagram">
-            <img
-              src="img/icons/scikit.svg"
-              alt="scikit-learn"
-              class="tool-icon"
-            />
+            <img src="img/icons/scikit.svg" alt="scikit-learn" class="tool-icon" />
             <span>scikit-learn</span>
           </li>
         </ul>
@@ -96,8 +88,8 @@
           <h3>Project Description</h3>
           <p>
             This report presents a state-of-the-art overview of the main approaches that can be used to address
-            the challenge. In parallel, baseline
-            reconstruction approaches such as k-Nearest Neighbors (k-NN) and Matrix Completion have been explored.
+            the challenge. In parallel, baseline reconstruction approaches such as k-Nearest Neighbors (k-NN)
+            and Matrix Completion have been explored.
           </p>
 
           <div style="text-align: center; margin-top: 12px;">
@@ -109,49 +101,52 @@
       </div>
 
       <div class="project">
-  <div class="project-info">
-    <h3>Data Preprocessing</h3>
-    <p>
-      A dedicated Python notebook was developed to preprocess the electricity consumption time series before modeling.
-      The notebook handles data loading, detection of missing values, alignment of daily consumption curves, and construction
-      of clean inputs for reconstruction algorithms.
-    </p>
+        <div class="project-info">
+          <h3>Data Preprocessing</h3>
+          <p>
+            A dedicated Python notebook was developed to preprocess the electricity consumption time series before modeling.
+            The notebook handles data loading, detection of missing values, alignment of daily consumption curves, and construction
+            of clean inputs for reconstruction algorithms.
+          </p>
 
-    <ul style="margin-top: 8px;">
-      <li>Identification and masking of missing segments in daily time series</li>
-      <li>Filtering and validation of corrupted or incomplete curves</li>
-      <li>Reshaping and normalization of data for model compatibility</li>
-    </ul>
+          <ul style="margin-top: 8px;">
+            <li>Identification and masking of missing segments in daily time series</li>
+            <li>Filtering and validation of corrupted or incomplete curves</li>
+            <li>Reshaping and normalization of data for model compatibility</li>
+          </ul>
 
-    <div style="text-align: center; margin-top: 12px;">
-      <a href="https://github.com/martinsln/data_challenge_enedis/blob/main/data_prep_notebook.ipynb"
-         target="_blank"
-         class="details-button">
-        View Preprocessing Notebook (GitHub)
-      </a>
-    </div>
+          <div style="text-align: center; margin-top: 12px;">
+            <a href="https://github.com/martinsln/data_challenge_enedis/blob/main/data_prep_notebook.ipynb"
+               target="_blank"
+               class="details-button">
+              View Preprocessing Notebook (GitHub)
+            </a>
+          </div>
+        </div>
+      </div>
 
-    
-  </div>
-</div>
+      <div class="project">
+        <div class="project-info">
+          <h3>Matrix Completion Code</h3>
+          <p>
+            A matrix completion approach based on low-rank approximation was implemented to reconstruct
+            missing values in electricity consumption time series, leveraging correlations across thousands
+            of consumption profiles. (Ranked 37th out of 120 with this code)
+          </p>
 
-    <div class="project-info">
-      <h3>Matrix Completion Code</h3>
-      <p>
-        A matrix completion approach based on low-rank approximation was implemented to reconstruct missing values in electricity consumption time series, leveraging correlations across thousands of consumption profiles.
-      </p>
+          <div style="text-align: center; margin-top: 12px;">
+            <a href="https://github.com/martinsln/data_challenge_enedis/blob/main/submit_matrix2.py"
+               target="_blank"
+               class="details-button">
+              View Code (GitHub)
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <div style="text-align: center; margin-top: 12px;">
-        <a href="https://github.com/martinsln/data_challenge_enedis/blob/main/submit_matrix2.py"
-          target="_blank"
-          class="details-button">
-          View Code (GitHub)
-        </a>
-    </div>
-
-    <div class="project-back">
-      <a href="projects.html" class="project-link">← Back to Projects</a>
-    </div>
+      <div class="project-back">
+        <a href="projects.html" class="project-link">← Back to Projects</a>
+      </div>
     </main>
   </div>
 
