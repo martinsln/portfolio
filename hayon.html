@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Composite Tailgate Optimization – Martin Saulnier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="fade-in">
+  <div class="container">
+    <header>
+      <div class="name">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          Martin Saulnier - Portfolio
+        </a>
+        <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3
+                    7 7 0 0021 12.79z"/>
+          </svg>
+
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="academics.html">Academics</a>
+        <a href="experience.html">Experience</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="projects-title">Composite Tailgate Optimization</h1>
+
+      <div class="project-top">
+        <div class="project-objective">
+          <span class="objective-label">Objective</span>
+          <p>
+            Select the optimal composite material and fiber orientation for a car tailgate panel under crash
+            (slam) loading, minimizing the Tsai-Wu failure criterion while keeping the finite-element cost
+            of exploring the material/orientation design space low.
+          </p>
+        </div>
+
+        <div class="tools-card">
+          <span class="tools-title">Tools & Languages</span>
+          <ul class="tools-list">
+            <li class="tool python">
+              <img src="img/icons/python.svg" alt="Python" class="tool-icon" />
+              <span>Python</span>
+            </li>
+            <li class="tool diagram">
+              <img src="img/icons/abaqus.svg" alt="ABAQUS" class="tool-icon" />
+              <span>ABAQUS</span>
+            </li>
+            <li class="tool diagram">
+              <img src="img/icons/scikit.svg" alt="scikit-learn" class="tool-icon" />
+              <span>scikit-learn</span>
+            </li>
+            <li class="tool spreadsheet">
+              <img src="img/icons/numpy.svg" alt="NumPy" class="tool-icon" />
+              <span>NumPy</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-info">
+          <h3>Project Description</h3>
+          <p>
+            Continuous-fiber composites offer much higher stiffness-to-weight ratios than conventional steel,
+            but their strongly anisotropic behavior means performance depends on both the material choice
+            (fiber and matrix) and the fiber orientation relative to the loading directions. Re-running a
+            finite-element simulation for every combination would be computationally prohibitive, so this
+            project (team of 4, ENSAM 2026) combines Abaqus simulations with a Gaussian Process surrogate
+            model to make the exploration fast enough to optimize densely over fiber orientation.
+          </p>
+
+          <div style="text-align: center; margin-top: 12px;">
+            <a href="pdf/Rapport_COSCE.pdf" target="_blank" class="details-button">
+              Download the Full Report (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-info">
+          <h3>Milestone 1 – Finite Element Model & Critical Zone Selection</h3>
+          <ul class="project-kpis">
+            <li><strong>FE model:</strong> tailgate meshed in <u>Abaqus</u> with 13,028 S3 shell elements (plane-stress shells), loaded under a door-slam load case</li>
+            <li><strong>Material catalog:</strong> 10 configurations spanning 3 fiber types (glass, basalt, carbon) × 3 matrices (PE, PC, epoxy), plus an isotropic PP reference</li>
+            <li><strong>Spatial filtering:</strong> boundary elements excluded (|Y| &gt; 250 mm) to remove artificial stress concentrations from the boundary conditions</li>
+            <li><strong>Critical zones:</strong> the 30 most-loaded elements per simulation (top 15 in each of two symmetric zones) are kept, giving a dataset of 300 points across the 10 materials</li>
+          </ul>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/hayon/mesh_von_mises_YZ.png" class="show" alt="Von Mises stress map with critical elements (YZ view)" />
+        </div>
+      </div>
+
+      <div class="project reverse">
+        <div class="project-info">
+          <h3>Milestone 2 – Gaussian Process Surrogate Model</h3>
+          <ul class="project-kpis">
+            <li><strong>Surrogate:</strong> three independent Gaussian Processes (<u>scikit-learn</u>, RBF + white-noise kernel) predict the S11, S22, S12 stress components as a function of (E, ν, element ID)</li>
+            <li><strong>Goal:</strong> predict stresses for any material (E, ν) at near-zero cost, enabling a dense sweep over fiber orientation without new Abaqus runs</li>
+            <li><strong>Validation:</strong> Leave-One-Simulation-Out cross-validation (an entire material held out at each fold) — a stricter test than standard CV since it checks interpolation between materials</li>
+            <li><strong>Accuracy:</strong> RMSE of 0.7–1.2 MPa on all three stress components, corresponding to a relative error below 3%</li>
+          </ul>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/hayon/validation_gp.png" class="show" alt="Leave-One-Simulation-Out cross-validation of the Gaussian Process surrogate" />
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-info">
+          <h3>Milestone 3 – Stress Rotation & Tsai-Wu Criterion</h3>
+          <ul class="project-kpis">
+            <li><strong>Stress rotation:</strong> predicted stresses are rotated from the global frame (x, y) into the material frame (e₁ fiber, e₂ transverse) for each candidate fiber angle θ</li>
+            <li><strong>Failure criterion:</strong> the quadratic Tsai-Wu criterion is evaluated on each critical element (f &lt; 1 → safe, f ≥ 1 → failure)</li>
+            <li><strong>Grid search:</strong> for each material, θ* ∈ [0°, 175°] is found by minimizing the worst-case (max) Tsai-Wu value over the 30 critical elements</li>
+            <li><strong>Key finding:</strong> the matrix (PE / PC / epoxy) is the dominant factor — all epoxy-based composites are safe (f ≤ 0.57) while all PE-based ones fail, regardless of fiber type</li>
+          </ul>
+          <div style="text-align: center; margin-top: 12px;">
+            <a href="code/hayon/composite_optimizer.py" target="_blank" class="details-button">
+              View Optimization Code (Python)
+            </a>
+          </div>
+        </div>
+        <div class="project-carousel">
+          <img src="img/projects/hayon/schema_rotation.png" class="show" alt="Global frame vs material frame, rotation by angle theta" />
+        </div>
+      </div>
+
+      <div class="project-results">
+        <span class="results-label">Results</span>
+        <p>
+          The methodology successfully identifies a safe, lightweight composite configuration while cutting the
+          number of required Abaqus simulations from a full material × orientation grid down to only 10 reference
+          runs, with the Gaussian Process surrogate covering the rest of the design space.
+        </p>
+
+        <ul class="project-kpis">
+          <li><strong>Optimal material:</strong> Glass + epoxy at θ* = 145°</li>
+          <li><strong>Tsai-Wu criterion:</strong> f = 0.56 (44% safety margin)</li>
+          <li><strong>Stress reduction:</strong> peak Von Mises stress drops from 52.0 MPa (isotropic PP) to 20.4 MPa (glass/epoxy) — a 61% reduction</li>
+          <li><strong>Surrogate accuracy:</strong> below 3% relative error on all stress components (LOSO validation)</li>
+          <li><strong>Consistency:</strong> optimal orientation is stable within each matrix family (145° for epoxy, 115° for PC, 120° for PE), confirming the robustness of the surrogate model</li>
+        </ul>
+
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+          <img src="img/projects/hayon/optimisation_resultats.png" alt="Tsai-Wu criterion vs fiber orientation and optimal orientation per material" style="max-width: 100%; border-radius: 8px;" />
+          <img src="img/projects/hayon/comparaison_vonmises.png" alt="Von Mises comparison between PP and glass/epoxy" style="max-width: 100%; border-radius: 8px;" />
+          <img src="img/projects/hayon/mesh_von_mises_XY.png" alt="Von Mises stress map, top view (XY)" style="max-width: 100%; border-radius: 8px;" />
+        </div>
+      </div>
+
+      <div class="project-back">
+        <a href="projects.html" class="project-link">← Back to Projects</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
